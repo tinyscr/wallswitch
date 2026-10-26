@@ -1,0 +1,10 @@
+# wallswitch pools - edit this file.
+# PoolDir: absolute path to the images.
+# PoolKey: global hotkey that triggers this pool (e.g. F7 or Ctrl+Alt+W)
+# Mode:    random = each enabled target gets a different image
+#          sync   = all enabled targets get the same image
+
+[General]
+PoolDir=C:\Pictures\Wallpapers
+PoolKey=F7
+Mode=sync
