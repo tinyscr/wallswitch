@@ -1,0 +1,14 @@
+# Compiled executable
+bin/*.exe
+
+# Local build wrapper
+build.bat
+
+# Release staging
+dist/
+
+# Runtime state
+bin/state/
+
+# Logs
+bin/logs/
