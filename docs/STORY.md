@@ -1,12 +1,14 @@
 # Why wallswitch exists
 
+This is the project history. For setup and usage, start with the [README](../README.md).
+
 ## The problem
 
 I used to have two separate wallpaper tools - one for nature images, one for tech images. Each was its own binary with its own folder and its own hotkey mapping. That split was a maintenance headache: every wallpaper change to either pool meant touching two tools, and there was no way to guarantee a varied rotation.
 
 ## The old approach
 
-The old tools (`archive/wallswitch/v1/`) worked but had real gaps:
+The old tools worked but had real gaps:
 
 - **Pure random selection** - the same image could repeat several times before others ever showed.
 - **No state tracking** - nothing persisted across runs, so restarting the machine lost all rotation history.
@@ -21,7 +23,7 @@ The nature/tech distinction is purely about which images are in the folder - the
 - **Targets over "just the desktop"** - a pool can apply to the desktop, Windows Terminal's background, and the registry (for reboot persistence), in one press.
 - **A shuffle queue** instead of pure random - every image is shown exactly once before any repeats, so a varied rotation is guaranteed.
 - **A persistent `state` file per pool** - each pool's cycle survives reboots independently.
-- **Live config reload** - pool `Mode`/`Dir` changes apply on the next press, no restart.
-- **A `build.bat`** - recompiling is one command.
+- **Live config reload** - pool `Mode`/`PoolDir` changes apply on the next press, no restart.
+- **A `build.ps1`** - recompiling is one command.
 
-The result is one daemon with a hotkey per pool, each cycling a guaranteed-varied rotation across every target you enable.
+The result is one daemon with a hotkey per pool, each cycling a guaranteed-varied rotation across the targets you enable.
